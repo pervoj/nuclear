@@ -3,7 +3,7 @@
 	font-family: Helmet Neue;
 	font-style: normal;
 	font-weight: 400;
-	src: local('Helmet Neue Regular'), local('HelmetNeue-Regular'), url('/assets/fonts/helmet-neue-regular.woff2') format('woff2');
+	src: local('Helmet Neue Regular'), local('HelmetNeue-Regular'), url('../assets/fonts/helmet-neue-regular.woff2') format('woff2');
 }
 
 /* cantarell-thin */
@@ -11,7 +11,7 @@
 	font-family: Cantarell;
 	font-style: normal;
 	font-weight: 100;
-	src: local('Cantarell Thin'), local('Cantarell-Thin'), url('/assets/fonts/cantarell-thin.woff2') format('woff2');
+	src: local('Cantarell Thin'), local('Cantarell-Thin'), url('../assets/fonts/cantarell-thin.woff2') format('woff2');
 }
 
 /* cantarell-light */
@@ -19,7 +19,7 @@
 	font-family: Cantarell;
 	font-style: normal;
 	font-weight: 300;
-	src: local('Cantarell Light'), local('Cantarell-Light'), url('/assets/fonts/cantarell-light.woff2') format('woff2');
+	src: local('Cantarell Light'), local('Cantarell-Light'), url('../assets/fonts/cantarell-light.woff2') format('woff2');
 }
 
 /* cantarell-regular */
@@ -27,7 +27,7 @@
 	font-family: Cantarell;
 	font-style: normal;
 	font-weight: 400;
-	src: local('Cantarell Regular'), local('Cantarell-Regular'), url('/assets/fonts/cantarell-regular.woff2') format('woff2');
+	src: local('Cantarell Regular'), local('Cantarell-Regular'), url('../assets/fonts/cantarell-regular.woff2') format('woff2');
 }
 
 /* cantarell-bold */
@@ -35,7 +35,7 @@
 	font-family: Cantarell;
 	font-style: normal;
 	font-weight: 700;
-	src: local('Cantarell Bold'), local('Cantarell-Bold'), url('/assets/fonts/cantarell-bold.woff2') format('woff2');
+	src: local('Cantarell Bold'), local('Cantarell-Bold'), url('../assets/fonts/cantarell-bold.woff2') format('woff2');
 }
 
 /* cantarell-extra-bold */
@@ -43,5 +43,5 @@
 	font-family: Cantarell;
 	font-style: normal;
 	font-weight: 800;
-	src: local('Cantarell Extra Bold'), local('Cantarell-ExtraBold'), url('/assets/fonts/cantarell-extra-bold.woff2') format('woff2');
+	src: local('Cantarell Extra Bold'), local('Cantarell-ExtraBold'), url('../assets/fonts/cantarell-extra-bold.woff2') format('woff2');
 }
