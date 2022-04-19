@@ -1,0 +1,58 @@
+@use '../variables/colors';
+@use '../variables/contrast';
+
+.btn {
+	display: inline-block;
+
+	text-decoration: none;
+	outline: none;
+	border: 0.1em solid transparent;
+	border-radius: 0.4em;
+	cursor: pointer;
+
+	font-size: inherit;
+	font-weight: inherit;
+	padding: 0.4em 1em;
+	white-space: nowrap;
+	line-height: inherit;
+
+	transition:
+		background-color 0.2s ease,
+		border-color 0.2s ease,
+		color 0.2s ease,
+		box-shadow 0.2s ease;
+
+
+	@each $key, $map in colors.$colors {
+		@each $name, $color in $map {
+
+			&.#{$key}-#{$name} {
+				background-color: $color;
+				border-color: $color;
+				@include contrast.text-contrast($color);
+
+				&:hover {
+					background-color: darken($color, 10%);
+					border-color: darken($color, 5%);
+				}
+
+				&:focus { box-shadow: 0 0 0 0.25em rgb($color, 0.6); }
+			}
+
+			&.#{$key}-#{$name}-outline {
+				background-color: transparent;
+				border-color: $color;
+				color: $color;
+
+				&:hover, &:focus {
+					background-color: $color;
+					@include contrast.text-contrast($color);
+				}
+
+				&:focus { box-shadow: 0 0 0 0.25em rgb($color, 0.6); }
+			}
+
+		}
+	}
+
+}

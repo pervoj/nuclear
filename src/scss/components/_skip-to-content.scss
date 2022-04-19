@@ -1,0 +1,26 @@
+.skip-to-content {
+	position: fixed;
+	top: -100%;
+	left: 1rem;
+	padding: 0.4rem 0.6rem;
+	border-radius: 0.4rem;
+
+	background-color: var(--clr-accent-light);
+	color: var(--clr-accent-dark);
+	border: 0.2rem solid var(--clr-accent-dark-lighter);
+	box-shadow: 0 0 1rem rgb(black, 0.7);
+
+	font-family: Helmet Neue;
+	font-size: 1.2rem;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	z-index: 9999;
+
+	transition: top 0.2s ease;
+
+	&:focus {
+		top: 1rem;
+		outline: 0;
+	}
+}

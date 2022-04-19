@@ -1,0 +1,16 @@
+.logo {
+	font-family: Helmet Neue;
+	display: inline-block;
+
+	&::before {
+		content: 'per';
+		color: var(--clr-accent-primary);
+	}
+
+	&::after {
+		content: 'voj';
+		color: var(--clr-accent-light);
+	}
+
+	&:is(a) { text-decoration: none; }
+}
