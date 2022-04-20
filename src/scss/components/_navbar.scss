@@ -107,7 +107,7 @@
 
 	.toggler {
 		height: 2em;
-		aspect-ratio: 1;
+		min-width: 2em;
 		margin-left: auto;
 		display: none;
 
@@ -125,11 +125,13 @@
 
 		@include bp.mq-max(small) { display: flex; }
 
-
-		&::before {
+		// complex selector, to be simply overridable:
+		//   - it's simple to use own Font Awesome icon
+		//   - it's simple to use own content with .empty
+		:where(&:not(.empty))::before {
 			content: '\f0c9';
 			font-family: 'Font Awesome 6 Free';
-    		font-weight: 900;
+			font-weight: 900;
 		}
 	}
 
