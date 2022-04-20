@@ -1,4 +1,10 @@
-/* helmet-neue-regular */
+// Font Awesome 6 Free
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+
+// Helmet Neue
+
 @font-face {
 	font-family: Helmet Neue;
 	font-style: normal;
@@ -6,7 +12,9 @@
 	src: local('Helmet Neue Regular'), local('HelmetNeue-Regular'), url('../assets/fonts/helmet-neue-regular.woff2') format('woff2');
 }
 
-/* cantarell-thin */
+
+// Cantarell
+
 @font-face {
 	font-family: Cantarell;
 	font-style: normal;
@@ -14,7 +22,6 @@
 	src: local('Cantarell Thin'), local('Cantarell-Thin'), url('../assets/fonts/cantarell-thin.woff2') format('woff2');
 }
 
-/* cantarell-light */
 @font-face {
 	font-family: Cantarell;
 	font-style: normal;
@@ -22,7 +29,6 @@
 	src: local('Cantarell Light'), local('Cantarell-Light'), url('../assets/fonts/cantarell-light.woff2') format('woff2');
 }
 
-/* cantarell-regular */
 @font-face {
 	font-family: Cantarell;
 	font-style: normal;
@@ -30,7 +36,6 @@
 	src: local('Cantarell Regular'), local('Cantarell-Regular'), url('../assets/fonts/cantarell-regular.woff2') format('woff2');
 }
 
-/* cantarell-bold */
 @font-face {
 	font-family: Cantarell;
 	font-style: normal;
@@ -38,7 +43,6 @@
 	src: local('Cantarell Bold'), local('Cantarell-Bold'), url('../assets/fonts/cantarell-bold.woff2') format('woff2');
 }
 
-/* cantarell-extra-bold */
 @font-face {
 	font-family: Cantarell;
 	font-style: normal;
