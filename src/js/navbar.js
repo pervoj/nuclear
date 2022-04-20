@@ -3,7 +3,6 @@ document.querySelectorAll('.navbar .toggler').forEach(el => {
 		const menu = el.parentNode.querySelector('.links');
 		menu.classList.toggle('open');
 		if (menu.classList.contains('open')) {
-			console.log(menu.scrollHeight);
 			menu.style.maxHeight = menu.scrollHeight + 'px';
 		} else {
 			menu.style.maxHeight = null;
