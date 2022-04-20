@@ -1,2 +1,1 @@
-import { } from './navbar.js';
-import { } from './footer.js';
+document.querySelectorAll("footer .year").forEach(e=>{var t=(new Date).getFullYear();e.innerText!=t&&(e.innerText+=" – "+t)}),document.querySelectorAll(".navbar .toggler").forEach(t=>{t.addEventListener("click",()=>{const e=t.parentNode.querySelector(".links");e.classList.toggle("open"),e.classList.contains("open")?e.style.maxHeight=e.scrollHeight+"px":e.style.maxHeight=null})});
