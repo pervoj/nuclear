@@ -4,7 +4,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
 
-exports.build = function (cb) {
+exports.build = (cb) => {
 	src('src/scss/**/*.scss').pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)).pipe(dest('dist/css'));
 	src('src/js/**/*').pipe(concat('nuclear.js')).pipe(uglify()).pipe(dest('dist/js/'));
 	src('src/**/*.html').pipe(dest('dist/'));
@@ -12,6 +12,6 @@ exports.build = function (cb) {
 	cb();
 }
 
-exports.watch = function (cb) {
+exports.watch = (cb) => {
 	watch(['src/**/*'], exports.build);
 }
