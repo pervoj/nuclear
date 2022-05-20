@@ -14,4 +14,4 @@ module.exports = () => {
 
 };
 
-module.exports.reload = () => browserSync.reload();
+module.exports.reload = browserSync.reload;

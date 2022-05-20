@@ -9,13 +9,25 @@ const f = require('./functions');
 if (process.argv[2]) {
 	if (tasks[process.argv[2]]) {
 
-		console.log(`${f.getLogTime()} Running ${process.argv[2]}`);
+		let taskName = process.argv[2];
+		let task = tasks[process.argv[2]];
 
-		try {
-			tasks[process.argv[2]]();
-		} catch (e) {
-			console.error(`${e}`);
+		if (process.argv[3] && task[process.argv[3]]) {
+			taskName += ` ${process.argv[3]}`;
+			task = task[process.argv[3]];
 		}
 
-	} else console.error('Error: this task doesn\'t exist!');
-} else console.error('Error: you have to specify the task!');
+		console.log(`${f.getLogTime()} Running \`${taskName}\``);
+
+		try {
+			task();
+		} catch (e) {
+			console.error(`${f.getLogTime()} ${e}`);
+		}
+
+	} else {
+		console.error(`${f.getLogTime()} Error: this command doesn't exist!`);
+	}
+} else {
+	console.error(`${f.getLogTime()} Error: you have to specify the command!`);
+}
