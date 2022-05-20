@@ -110,13 +110,13 @@
 
 			&.open { box-shadow: 0 0.5rem 0.5rem -0.5rem rgb(black, 0.7); }
 
-			a, .btns {
+			:not(.btns) a, .btns {
 				display: block;
 				padding: 0.8rem 1rem;
 			}
 
 			> a:last-child,
-			li:last-child a,
+			:last-child:not(.btns) a,
 			.btns:last-child {
 				padding-block-end: 1rem;
 			}
