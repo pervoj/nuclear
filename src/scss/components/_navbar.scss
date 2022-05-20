@@ -145,7 +145,7 @@
 		@include bp.mq-max('medium') { display: flex; }
 
 		&:not(.borderless) {
-			border: 1px solid var(--clr-accent-dark-lighter);
+			border: 1px solid c.clrl('accent', 'dark');
 			border-radius: 0.4rem;
 		}
 
