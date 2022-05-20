@@ -1,11 +1,10 @@
 @use '../variables/colors' as c;
 
-$clr-primary: map-get(map-get(c.$colors, theme), primary);
 
 .input {
 	&:is(input),
 	&:is(select) {
-		border: 0.1em solid var(--clr-theme-light);
+		border: 0.1em solid c.clr('theme', 'light');
 		border-radius: 0.4em;
 		background: none;
 
@@ -20,7 +19,7 @@ $clr-primary: map-get(map-get(c.$colors, theme), primary);
 		&:focus:not([disabled]) {
 			outline: none;
 			border-color: var(--clr-theme-primary);
-			box-shadow: 0 0 0 0.25em rgb($clr-primary, 0.6);
+			box-shadow: 0 0 0 0.25em rgb(c.clr('theme', 'primary'), 0.6);
 		}
 
 		&[type=color] {
@@ -28,6 +27,6 @@ $clr-primary: map-get(map-get(c.$colors, theme), primary);
 			height: 2em;
 		}
 
-		&[disabled] { background-color: var(--clr-theme-light-lighter); }
+		&[disabled] { background-color: c.clrl('theme', 'light'); }
 	}
 }

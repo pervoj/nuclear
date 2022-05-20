@@ -2,11 +2,11 @@
 
 :root {
 
-	@each $key, $map in v.$colors {
+	@each $namespace, $map in v.$colors {
 		@each $name, $color in $map {
-			--clr-#{$key}-#{$name}: #{$color};
-			--clr-#{$key}-#{$name}-lighter: #{lighten($color, 20%)};
-			--clr-#{$key}-#{$name}-darker: #{darken($color, 20%)};
+			--clr-#{$namespace}-#{$name}: #{$color};
+			--clr-#{$namespace}-#{$name}-lighter: #{v.clrl($namespace, $name)};
+			--clr-#{$namespace}-#{$name}-darker: #{v.clrd($namespace, $name)};
 		}
 	}
 

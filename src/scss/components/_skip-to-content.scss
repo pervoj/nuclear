@@ -1,13 +1,18 @@
+@use '../variables/colors' as c;
+
+
 .skip-to-content {
 	position: fixed;
-	top: -100%;
+	top: 1rem;
 	left: 1rem;
 	padding: 0.4rem 0.6rem;
 	border-radius: 0.4rem;
 
-	background-color: var(--clr-accent-light);
-	color: var(--clr-accent-dark);
-	border: 0.2rem solid var(--clr-accent-dark-lighter);
+	transform: translateY(-200%);
+
+	background-color: c.clr('accent', 'light');
+	color: c.clr('accent', 'dark');
+	border: 0.2rem solid c.clrl('accent', 'dark');
 	box-shadow: 0 0 1rem rgb(black, 0.7);
 
 	font-family: Helmet Neue;
@@ -17,10 +22,10 @@
 
 	z-index: 9999;
 
-	transition: top 0.2s ease;
+	transition: transform 0.2s ease;
 
 	&:focus {
-		top: 1rem;
+		transform: translateY(0);
 		outline: 0;
 	}
 }

@@ -1,28 +1,24 @@
 html {
 	font-family: Cantarell, sans-serif;
-	scroll-behavior: smooth;
-
-	line-height: 1.4;
-}
-
-body {
-	position: relative;
-	margin: 0;
-	min-height: 100vh;
-	height: max-content;
-
+	line-height: 1.5;
 	@supports (font-variation-settings: 'wght' 400) {
 		font-family: CantarellVariable, sans-serif;
 		font-variation-settings: 'wght' 400;
 	}
+
+	scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin: 0;
+	min-height: 100vh;
+	height: max-content;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-
-
-::-moz-focus-inner {
-	border: 0;
-}
 
 
 .container {
@@ -30,4 +26,16 @@ body {
 	padding-inline: 1.5rem;
 	max-width: 55rem;
 	text-align: justify;
+}
+
+
+strong, b, .strong {
+	font-weight: 700;
+	font-variation-settings: 'wght' 700;
+}
+
+
+img {
+	display: inline-block;
+	max-width: 100%;
 }

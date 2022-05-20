@@ -7,10 +7,8 @@
 	$light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + math.div((blue(#ffffff) * 114), 1000));
 
 	@if abs($color-brightness) < math.div($light-color, 2) {
-		color: white;
-	}
-
-	@else {
-		color: black;
+		color: #ffffff;
+	} @else {
+		color: #000000;
 	}
 }
