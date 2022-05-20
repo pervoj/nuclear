@@ -18,7 +18,7 @@
 
 		&:focus:not([disabled]) {
 			outline: none;
-			border-color: var(--clr-theme-primary);
+			border-color: c.clr('theme', 'primary');
 			box-shadow: 0 0 0 0.25em rgb(c.clr('theme', 'primary'), 0.6);
 		}
 
