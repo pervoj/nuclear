@@ -28,7 +28,7 @@ body {
 .container {
 	margin-inline: auto;
 	padding-inline: 1.5rem;
-	max-width: 55rem;
+	width: min(100%, 55rem);
 	text-align: justify;
 }
 
