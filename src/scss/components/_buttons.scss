@@ -3,6 +3,11 @@
 
 
 .btn {
+	--btn-background: black;
+	--btn-hover: darkgray;
+	--btn-text: white;
+	--btn-outline: lightgray;
+
 	display: inline-block;
 
 	text-decoration: none;
@@ -18,40 +23,43 @@
 	white-space: nowrap;
 	line-height: inherit;
 
+	background-color: var(--btn-background);
+	border-color: var(--btn-background);
+	color: var(--btn-text);
+
 	transition:
 		background-color 0.2s ease,
 		border-color 0.2s ease,
 		color 0.2s ease,
 		box-shadow 0.2s ease;
 
+	&:hover {
+		background-color: var(--btn-hover);
+		border-color: var(--btn-hover);
+	}
+
+	&:focus { box-shadow: 0 0 0 0.25em var(--btn-outline); }
+
+	&.outline {
+		background-color: transparent;
+		color: var(--btn-background);
+
+		&:hover {
+			background-color: var(--btn-background);
+			border-color: var(--btn-background);
+			color: var(--btn-text);
+		}
+	}
+
 
 	@each $key, $map in colors.$colors {
 		@each $name, $color in $map {
 
 			&.#{$key}-#{$name} {
-				background-color: $color;
-				border-color: $color;
-				@include contrast.text-contrast($color);
-
-				&:hover {
-					background-color: darken($color, 10%);
-					border-color: darken($color, 10%);
-				}
-
-				&:focus { box-shadow: 0 0 0 0.25em rgb($color, 0.6); }
-			}
-
-			&.#{$key}-#{$name}-outline {
-				background-color: transparent;
-				border-color: $color;
-				color: $color;
-
-				&:hover, &:focus {
-					background-color: $color;
-					@include contrast.text-contrast($color);
-				}
-
-				&:focus { box-shadow: 0 0 0 0.25em rgb($color, 0.6); }
+				--btn-background: #{$color};
+				--btn-hover: #{darken($color, 10%)};
+				--btn-text: #{contrast.text-contrast($color)};
+				--btn-outline: #{rgb($color, 0.6)};
 			}
 
 		}
