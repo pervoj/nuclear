@@ -1,3 +1,6 @@
+@use 'variables/colors' as c;
+
+
 html {
 	font-family: Cantarell, sans-serif;
 	line-height: 1.5;
@@ -22,7 +25,10 @@ body {
 	}
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+*, *::before, *::after {
+	box-sizing: border-box;
+	scroll-padding-block-start: 5rem;
+}
 
 
 .container {
@@ -42,4 +48,26 @@ strong, b, .strong {
 img {
 	display: inline-block;
 	max-width: 100%;
+}
+
+
+a {
+	color: c.clr('theme', 'primary');
+	@media (prefers-color-scheme: dark) {
+		color: c.clrl('theme', 'primary');
+	}
+}
+
+a:visited {
+	color: c.clr('theme', 'visited');
+	@media (prefers-color-scheme: dark) {
+		color: c.clrl('theme', 'visited');
+	}
+}
+
+a:active {
+	color: c.clr('theme', 'error');
+	@media (prefers-color-scheme: dark) {
+		color: c.clrl('theme', 'error');
+	}
 }
