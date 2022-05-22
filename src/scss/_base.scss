@@ -51,23 +51,23 @@ img {
 }
 
 
-a {
+a:not(.btn) {
 	color: c.clr('theme', 'primary');
 	@media (prefers-color-scheme: dark) {
 		color: c.clrl('theme', 'primary');
 	}
-}
 
-a:visited {
-	color: c.clr('theme', 'visited');
-	@media (prefers-color-scheme: dark) {
-		color: c.clrl('theme', 'visited');
+	&:visited {
+		color: c.clr('theme', 'visited');
+		@media (prefers-color-scheme: dark) {
+			color: c.clrl('theme', 'visited');
+		}
 	}
-}
 
-a:active {
-	color: c.clr('theme', 'error');
-	@media (prefers-color-scheme: dark) {
-		color: c.clrl('theme', 'error');
+	&:active {
+		color: c.clr('theme', 'error');
+		@media (prefers-color-scheme: dark) {
+			color: c.clrl('theme', 'error');
+		}
 	}
 }
