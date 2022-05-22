@@ -25,7 +25,7 @@
 
 	background-color: var(--btn-background);
 	border-color: var(--btn-background);
-	color: var(--btn-text);
+	color: var(--btn-text) !important;
 
 	transition:
 		background-color 0.2s ease,
@@ -42,12 +42,12 @@
 
 	&.outline {
 		background-color: transparent;
-		color: var(--btn-background);
+		color: var(--btn-background) !important;
 
 		&:hover {
 			background-color: var(--btn-background);
 			border-color: var(--btn-background);
-			color: var(--btn-text);
+			color: var(--btn-text) !important;
 		}
 	}
 
