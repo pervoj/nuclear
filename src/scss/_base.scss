@@ -36,6 +36,8 @@ body {
 	padding-inline: 1.5rem;
 	width: min(100%, 55rem);
 	text-align: justify;
+	word-wrap: break-word;
+	hyphens: auto;
 }
 
 
