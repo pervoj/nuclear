@@ -2,17 +2,33 @@
 
 
 .logo {
-	font-family: Helmet Neue;
+	font-family: var(--fnt-helmet);
+	line-height: 1;
 	display: inline-block;
 	text-decoration: none;
 
-	&::before {
-		content: 'per';
-		color: c.clr('accent', 'primary');
-	}
+	height: 1em;
+	aspect-ratio: 135 / 41;
+	background-image: url('assets/logos/default-light.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 
-	&::after {
-		content: 'voj';
-		color: c.clr('accent', 'light');
+	&.dark { background-image: url('assets/logos/default-dark.svg'); }
+
+	&.text {
+		height: initial;
+		aspect-ratio: initial;
+		background: none;
+
+		&::before {
+			content: 'per';
+			color: c.clr('accent', 'primary');
+		}
+
+		&::after {
+			content: 'voj';
+			color: c.clr('accent', 'light');
+		}
 	}
 }
