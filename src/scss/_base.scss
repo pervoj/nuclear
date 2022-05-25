@@ -2,12 +2,8 @@
 
 
 html {
-	font-family: Cantarell, sans-serif;
+	font-family: var(--fnt-cantarell);
 	line-height: 1.5;
-	@supports (font-variation-settings: 'wght' 400) {
-		font-family: CantarellVariable, sans-serif;
-		font-variation-settings: 'wght' 400;
-	}
 
 	scroll-behavior: smooth;
 }

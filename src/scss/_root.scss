@@ -2,6 +2,13 @@
 
 :root {
 
+	--fnt-helmet: Helmet Neue, sans-serif;
+	--fnt-cantarell: Cantarell, sans-serif;
+	@supports (font-variation-settings: 'wght' 400) {
+		--fnt-cantarell: Cantarell Variable, sans-serif;
+		font-variation-settings: 'wght' 400;
+	}
+
 	@each $namespace, $map in v.$colors {
 		@each $name, $color in $map {
 			--clr-#{$namespace}-#{$name}: #{$color};
