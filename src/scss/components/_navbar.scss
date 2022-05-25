@@ -85,7 +85,7 @@
 					transition: transform 0.2s ease;
 				}
 
-				&:hover {
+				&:hover, &.active {
 					opacity: 1;
 
 					&::after { transform: scaleX(1); }
